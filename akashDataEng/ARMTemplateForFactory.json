@@ -874,9 +874,21 @@
 						"userProperties": [],
 						"typeProperties": {
 							"expression": {
-								"value": "@equals(activity('Get Metadata1').output.columnCount,6) \r\n",
+								"value": "@equals(activity('Get Metadata1').output.columnCount,6) \n",
 								"type": "Expression"
 							},
+							"ifFalseActivities": [
+								{
+									"name": "Fail1",
+									"type": "Fail",
+									"dependsOn": [],
+									"userProperties": [],
+									"typeProperties": {
+										"message": "Your PipeLine Fail Sir",
+										"errorCode": "404"
+									}
+								}
+							],
 							"ifTrueActivities": [
 								{
 									"name": "Copy data1",
@@ -937,6 +949,46 @@
 											"parameters": {}
 										}
 									]
+								},
+								{
+									"name": "Delete1",
+									"type": "Delete",
+									"dependsOn": [
+										{
+											"activity": "Copy data1",
+											"dependencyConditions": [
+												"Succeeded"
+											]
+										}
+									],
+									"policy": {
+										"timeout": "0.12:00:00",
+										"retry": 0,
+										"retryIntervalInSeconds": 30,
+										"secureOutput": false,
+										"secureInput": false
+									},
+									"userProperties": [],
+									"typeProperties": {
+										"dataset": {
+											"referenceName": "dlstoargeproducts1",
+											"type": "DatasetReference",
+											"parameters": {}
+										},
+										"logStorageSettings": {
+											"linkedServiceName": {
+												"referenceName": "AzureDataLakeStorage1",
+												"type": "LinkedServiceReference"
+											},
+											"path": "retaildata/raw"
+										},
+										"enableLogging": true,
+										"storeSettings": {
+											"type": "AzureBlobFSReadSettings",
+											"recursive": true,
+											"enablePartitionDiscovery": false
+										}
+									}
 								}
 							]
 						}
@@ -953,7 +1005,8 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/dlstoargeproducts1')]",
-				"[concat(variables('factoryId'), '/datasets/dlstorageproducts2')]"
+				"[concat(variables('factoryId'), '/datasets/dlstorageproducts2')]",
+				"[concat(variables('factoryId'), '/linkedServices/AzureDataLakeStorage1')]"
 			]
 		},
 		{
