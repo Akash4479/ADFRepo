@@ -1,5 +1,5 @@
 {
-	"name": "pl_move_SQL_ADLS",
+	"name": "AutomationData",
 	"properties": {
 		"activities": [
 			{
@@ -7,7 +7,7 @@
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
-					"timeout": "0.00:10:00",
+					"timeout": "0.12:00:00",
 					"retry": 0,
 					"retryIntervalInSeconds": 30,
 					"secureOutput": false,
@@ -43,51 +43,67 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "OrderID",
-									"type": "Int32",
-									"physicalType": "int"
+									"name": "1",
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "OrderID",
-									"type": "String",
+									"name": "product_id",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "CustomerID",
-									"type": "Int32",
-									"physicalType": "int"
+									"name": "2",
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "CustomerID",
-									"type": "String",
+									"name": "product_category_id",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "OrderDate",
-									"type": "DateTime",
-									"physicalType": "date"
+									"name": "Quest Q64 10 FT. x 10 FT. Slant Leg Instant U",
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "OrderDate",
-									"type": "String",
+									"name": "product_name",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "TotalAmount",
-									"type": "Decimal",
-									"physicalType": "decimal",
-									"scale": 2,
-									"precision": 10
+									"name": "Prop_3",
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "TotalAmount",
+									"name": "product_description",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "59.98",
 									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "product_price",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "http://images.acmesports.sports/Quest+Q64+10+FT.+x+10+FT.+Slant+Leg+Instant+Up+Canopy",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "product_image",
 									"physicalType": "String"
 								}
 							}
@@ -114,10 +130,8 @@
 			}
 		],
 		"folder": {
-			"name": "1. Pipeline Copy Data Activity"
+			"name": "4.Automation"
 		},
-		"annotations": [],
-		"lastPublishTime": "2024-04-16T06:41:14Z"
-	},
-	"type": "Microsoft.DataFactory/factories/pipelines"
+		"annotations": []
+	}
 }
