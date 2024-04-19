@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "akashDataEng"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"value": ""
+		},
+		"SQLSERVERCONN_connectionString": {
+			"value": ""
+		},
+		"ls_adls_conn_accountKey": {
+			"value": ""
+		},
+		"ls_sql_db_conn_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://deakashblob.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"value": "https://adlsstorageaccountakash.dfs.core.windows.net/"
+		},
+		"HttpServerOrdersData_properties_typeProperties_url": {
+			"value": "https://files.cdn.thinkific.com"
+		},
+		"lsHttp_OrdersData_properties_typeProperties_url": {
+			"value": "https://files.cdn.thinkific.com"
+		},
+		"ls_adls_conn_properties_typeProperties_url": {
+			"value": "https://deakashblob.dfs.core.windows.net/"
+		}
+	}
+}
