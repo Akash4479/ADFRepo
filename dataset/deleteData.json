@@ -1,0 +1,42 @@
+{
+	"name": "deleteData",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "HttpServerOrdersData",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "2.Transorm Data Agg"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Name",
+				"type": "String"
+			},
+			{
+				"name": "Category",
+				"type": "String"
+			},
+			{
+				"name": "Status",
+				"type": "String"
+			},
+			{
+				"name": "Error",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

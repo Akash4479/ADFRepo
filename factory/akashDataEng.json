@@ -1,0 +1,9 @@
+{
+	"name": "akashDataEng",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "cbfbe151-3b3d-4d40-af5d-67d5a5c9a8b5",
+		"tenantId": "5f0c202a-a440-40aa-a79f-3a2076da8b22"
+	}
+}

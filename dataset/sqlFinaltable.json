@@ -1,0 +1,61 @@
+{
+	"name": "sqlFinaltable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sql_db_conn",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "3.DatasetofSmallProject"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "customer_id",
+				"type": "varchar"
+			},
+			{
+				"name": "customer_fname",
+				"type": "varchar"
+			},
+			{
+				"name": "customer_lname",
+				"type": "varchar"
+			},
+			{
+				"name": "customer_street",
+				"type": "varchar"
+			},
+			{
+				"name": "customer_city",
+				"type": "varchar"
+			},
+			{
+				"name": "customer_state",
+				"type": "varchar"
+			},
+			{
+				"name": "customer_zipcode",
+				"type": "varchar"
+			},
+			{
+				"name": "order_id",
+				"type": "varchar"
+			},
+			{
+				"name": "order_date",
+				"type": "varchar"
+			},
+			{
+				"name": "order_status",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "finalData"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
