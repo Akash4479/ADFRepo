@@ -1,0 +1,17 @@
+{
+	"name": "MutilFileLoadTrigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 24,
+				"startTime": "2024-04-20T14:44:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}
