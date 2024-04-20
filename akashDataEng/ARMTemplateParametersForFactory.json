@@ -17,6 +17,9 @@
 		"ls_adls_conn_accountKey": {
 			"value": ""
 		},
+		"ls_adls_rawdb_dest_accountKey": {
+			"value": ""
+		},
 		"ls_sql_db_conn_connectionString": {
 			"value": ""
 		},
@@ -34,6 +37,12 @@
 		},
 		"ls_adls_conn_properties_typeProperties_url": {
 			"value": "https://deakashblob.dfs.core.windows.net/"
+		},
+		"ls_adls_rawdb_dest_properties_typeProperties_url": {
+			"value": "https://adlsstorageaccountakash.dfs.core.windows.net/"
+		},
+		"ls_http_source_properties_typeProperties_url": {
+			"value": "@{linkedService().baseURL}"
 		}
 	}
 }
