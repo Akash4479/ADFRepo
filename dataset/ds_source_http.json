@@ -1,0 +1,42 @@
+{
+	"name": "ds_source_http",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_http_source",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"baseURL": {
+					"value": "@dataset().baseURL",
+					"type": "Expression"
+				}
+			}
+		},
+		"parameters": {
+			"baseURL": {
+				"type": "string"
+			},
+			"RelativeURL": {
+				"type": "string"
+			}
+		},
+		"folder": {
+			"name": "5.Adhocdata Load"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "@dataset().RelativeURL",
+					"type": "Expression"
+				}
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
