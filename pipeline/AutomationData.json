@@ -48,8 +48,8 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "product_id",
-									"physicalType": "String"
+									"physicalType": "String",
+									"ordinal": 1
 								}
 							},
 							{
@@ -59,8 +59,8 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "product_category_id",
-									"physicalType": "String"
+									"physicalType": "String",
+									"ordinal": 2
 								}
 							},
 							{
@@ -70,8 +70,8 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "product_name",
-									"physicalType": "String"
+									"physicalType": "String",
+									"ordinal": 3
 								}
 							},
 							{
@@ -81,8 +81,8 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "product_description",
-									"physicalType": "String"
+									"physicalType": "String",
+									"ordinal": 4
 								}
 							},
 							{
@@ -92,8 +92,8 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "product_price",
-									"physicalType": "String"
+									"physicalType": "String",
+									"ordinal": 5
 								}
 							},
 							{
@@ -103,8 +103,8 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "product_image",
-									"physicalType": "String"
+									"physicalType": "String",
+									"ordinal": 6
 								}
 							}
 						],
